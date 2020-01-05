@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.jnoee</groupId>
+		<artifactId>xo-starter</artifactId>
+		<version>1.0.3-SNAPSHOT</version>
+	</parent>
+	<artifactId>xo-starter-session</artifactId>
+	<packaging>pom</packaging>
+
+	<name>xo-starter-session</name>
+	<description>xo-starter-session</description>
+	<url>https://github.com/Jnoee/xo-starter-session</url>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>jnoee</name>
+			<email>jnoee@qq.com</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://github.com/Jnoee/xo-starter-session</url>
+		<connection>scm:git:https://github.com/Jnoee/xo-starter-session.git</connection>
+		<developerConnection>scm:git:https://github.com/Jnoee/xo-starter-session.git</developerConnection>
+	</scm>
+
+	<modules>
+		<module>xo-starter-session-core</module>
+		<module>xo-starter-session-redis</module>
+		<module>xo-starter-session-redisson</module>
+	</modules>
+</project>
