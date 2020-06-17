@@ -2,7 +2,7 @@ package com.github.jnoee.xo.session.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.session.data.redis.RedisOperationsSessionRepository;
+import org.springframework.session.data.redis.RedisIndexedSessionRepository;
 
 import com.github.jnoee.xo.session.SessionProperties;
 
@@ -15,8 +15,8 @@ public class RedisSessionBeanPostProcessor implements BeanPostProcessor {
 
   @Override
   public Object postProcessAfterInitialization(Object bean, String beanName) {
-    if (bean instanceof RedisOperationsSessionRepository) {
-      RedisOperationsSessionRepository repo = (RedisOperationsSessionRepository) bean;
+    if (bean instanceof RedisIndexedSessionRepository) {
+      RedisIndexedSessionRepository repo = (RedisIndexedSessionRepository) bean;
       repo.setDefaultMaxInactiveInterval(sessionProperties.getTimeout() * 60);
       repo.setRedisKeyNamespace(sessionProperties.getNamespace());
     }
